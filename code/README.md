@@ -2,7 +2,7 @@
 
 *Some useful transfer learning and domain adaptation codes*
 
-> It is a waste of time looking for the codes from others. So I **collect** or **reimplement** them here in a way that you can **easily** use. The following are some of the popular transfer learning (domain adaptation) methods in recent years, and I know most of them will be chosen to compare with your own method.
+> It is a waste of time looking for the codes from others. So I **collect** or **reimplement** them here in a way that you can **easily** use. The following are some of the popular transfer learning (domain adaptation) methods in recent years, and I know most of them will be chosen to **compare** with your own method.
 
 > It is still **on the go**. You are welcome to contribute and suggest other methods.
 
@@ -10,8 +10,14 @@
 
 ## Availiable codes for:
 
-#### Non-deep learning
+### Theory
 
+- MMD及多核MMD代码：[Matlab](https://github.com/lopezpaz/classifier_tests/tree/master/code/unit_test_mmd) | [Python](https://github.com/jindongwang/transferlearning/tree/master/code/basic/mmd.py)
+
+### Traditional transfer learning methods
+
+- **SVM** (baseline)
+	- [Matlab](https://github.com/jindongwang/transferlearning/tree/master/code/SVM.m)
 - **TCA** (Transfer Component Anaysis, TNN-11) [1]
 	- [Matlab(Recommended!)](https://github.com/jindongwang/transferlearning/blob/master/code/MyTCA.m) | [Python](https://github.com/jindongwang/transferlearning/tree/master/code/TCA_python)
 - **GFK** (Geodesic Flow Kernel, CVPR-12) [2]
@@ -21,42 +27,76 @@
 - **TJM** (Transfer Joint Matching, CVPR-14) [4]
 	- [Matlab](https://github.com/jindongwang/transferlearning/blob/master/code/MyTJM.m)
 - **CORAL** (CORrelation ALignment, AAAI-15) [5]
-	- [Matlab](https://github.com/jindongwang/transferlearning/blob/master/code/MyCORAL.m) | [Github](https://github.com/VisionLearningGroup/CORAL)
+	- [Matlab](https://github.com/jindongwang/transferlearning/blob/master/code/CORAL) | [Github](https://github.com/VisionLearningGroup/CORAL)
 - **JGSA** (Joint Geometrical and Statistical Alignment, CVPR-17) [6]
-	- [Matlab](https://github.com/jindongwang/transferlearning/blob/master/code/MyJGSA.m)
+	- [Matlab](https://www.uow.edu.au/~jz960/codes/JGSA-r.rar)
 - **ARTL** (Adaptation Regularization, TKDE-14) [7]
 	- [Matlab](https://github.com/jindongwang/transferlearning/tree/master/code/MyARTL)
 - **TrAdaBoost** (ICML-07)[8]
 	- [Python](https://github.com/chenchiwei/tradaboost)
 - **SA** (Subspace Alignment, ICCV-13) [11]
-	- [Matlab](http://users.cecs.anu.edu.au/~basura/DA_SA/)
+	- [Matlab(official)](http://users.cecs.anu.edu.au/~basura/DA_SA/) | [Matlab](https://github.com/jindongwang/transferlearning/tree/master/code/SA_SVM.m)
 - **BDA** (Balanced Distribution Adaptation for Transfer Learning, ICDM-17) [15]
 	- [Matlab](https://github.com/jindongwang/transferlearning/tree/master/code/BDA)
 - **MTLF** (Metric Transfer Learning, TKDE-17) [16]
 	- [Matlab](https://github.com/xyh2016/MTLF)
 - **Open Set Domain Adaptation** (ICCV-17) [19]
-	- [Matlab(official, but not available now)](https://github.com/Heliot7/open-set-da) | [Matlab(My implementation)](https://github.com/jindongwang/transferlearning/tree/master/code/open_set_da)
+	- [Matlab(official)](https://github.com/Heliot7/open-set-da)
 - **TAISL** (When Unsupervised Domain Adaptation Meets Tensor Representations, ICCV-17) [21]
 	- [Matlab(official)](https://github.com/poppinace/TAISL)
+- **STL** (Stratified Transfer Learning for Cross-domain Activity Recognition, PerCom-18) [22]
+	- [Matlab](https://github.com/jindongwang/activityrecognition/tree/master/code/percom18_stl)
+- **LSA** (Landmarks-based kernelized subspace alignment for unsupervised domain adaptation, CVPR-15) [29]
+	- [Matlab](http://homes.esat.kuleuven.be/~raljundi/papers/LSA%20Clean%20Code.zip)
+- **OTL** (Online Transfer Learning, ICML-10) [31]
+	- [Matlab(official)](http://stevenhoi.org/otl)
 
 
+### Deep transfer learning methods
 
-#### Deep learning
-
+- **DeepCORAL** (Deep CORAL: Correlation Alignment for Deep Domain Adaptation) [33]
+	- [PyTorch](https://github.com/SSARCandy/DeepCORAL) | [中文解读](https://ssarcandy.tw/2017/10/31/deep-coral/)
 - **DAN/JAN** (Deep Adaptation Network/Joint Adaptation Network, ICML-15,17) [9,10]
-	- [Caffe](https://github.com/thuml/Xlearn)
+	- [Caffe(Official)](https://github.com/thuml/Xlearn)
 - **RTN** (Unsupervised Domain Adaptation with Residual Transfer Networks, NIPS-16) [12]
 	- [Caffe](https://github.com/thuml/Xlearn)
 - **ADDA** (Adversarial Discriminative Domain Adaptation, arXiv-17) [13]
-	- [Python(Tensorflow)](https://github.com/erictzeng/adda)
-- Unsupervised Domain Adaptation by Backpropagation (ICML-15) [14]
-	- [Caffe(from author)](https://github.com/ddtm/caffe/tree/grl)|[Tensorflow(third party)](https://github.com/shucunt/domain_adaptation)
-- Domain-Adversarial Training of Neural Networks (JMLR-16)[17] 
-	- [Tensorflow](https://github.com/jindongwang/tf-dann)
+	- [Tensorflow(Official)](https://github.com/erictzeng/adda) | [Pytorch](https://github.com/corenel/pytorch-adda)
+- **RevGrad** (Unsupervised Domain Adaptation by Backpropagation, ICML-15) [14]
+	- [Caffe(Official)](https://github.com/ddtm/caffe/tree/grl)|[Tensorflow(third party)](https://github.com/shucunt/domain_adaptation) | [PyTorch](https://github.com/fungtion/DANN)
+- **DANN** Domain-Adversarial Training of Neural Networks (JMLR-16)[17] 
+	- [Python(pure)](https://github.com/GRAAL-Research/domain_adversarial_neural_network) | [Tensorflow](https://github.com/jindongwang/tf-dann)
 - Associative Domain Adaptation (ICCV-17) [18]
 	- [Tensorflow](https://github.com/haeusser/learning_by_association)
 - Deep Hashing Network for Unsupervised Domain (CVPR-17) [20]
 	- [Matlab](https://github.com/hemanthdv/da-hash)
+- **CCSL** (Unified Deep Supervised Domain Adaptation and Generalization, ICCV-17) [23]
+	- [Python(Keras)](https://github.com/samotiian/CCSA)
+- **MRN** (Learning Multiple Tasks with Multilinear Relationship Networks, NIPS-17) [24]
+	- [Pytorch](https://github.com/thuml/MTlearn)
+- **AutoDIAL** (Automatic DomaIn Alignment Layers, ICCV-17) [25]
+	- [Caffe](https://github.com/ducksoup/autodial)
+- **DSN** (Domain Separation Networks, NIPS-16) [26]
+	- [Tensorflow](https://github.com/tensorflow/models/tree/master/research/domain_adaptation)
+- **DRCN** (Deep Reconstruction-Classification Networks for Unsupervised Domain Adaptation, ECCV-16) [27]
+	- [Keras](https://github.com/ghif/drcn)
+- Multi-task Autoencoders for Domain Generalization (ICCV-15) [28]
+	- [Keras](https://github.com/ghif/mtae)
+- Encoder based lifelong learning (ICCV-17) [30]
+	- [Matlab](https://github.com/rahafaljundi/Encoder-Based-Lifelong-learning)
+- **MECA** (Minimal-Entropy Correlation Alignment, ICLR-18) [32]
+	- [Python](https://github.com/pmorerio/minimal-entropy-correlation-alignment)
+- **WAE** (Wasserstein Auto-Encoders, ICLR-18) [34]
+	- [Python(Tensorflow)](https://github.com/tolstikhin/wae)
+- **ATDA** (Asymmetric Tri-training for Unsupervised Domain Adaptation, ICML-15) [35]
+	- [Pytorch](https://github.com/corenel/pytorch-atda#pytorch-atda)
+- **PixelDA_GAN** (Unsupervised pixel-level domain adaptation with GAN, CVPR-17) [36]
+	- [Pytorch](https://github.com/vaibhavnaagar/pixelDA_GAN)
+- **ARDA** (Adversarial Representation Learning for Domain Adaptation) [37]
+	- [Pytorch](https://github.com/corenel/pytorch-arda)
+- **DiscoGAN** (Learning to Discover Cross-Domain Relations with Generative Adversarial Networks) [38]
+	- [Pytorch](https://github.com/carpedm20/DiscoGAN-pytorch)
+
 - - -
 
 #### [Code from HKUST](http://www.cse.ust.hk/TL/) [a bit old]
@@ -110,3 +150,39 @@ Testing **dataset** can be found [here](https://github.com/jindongwang/transferl
 [20] Venkateswara H, Eusebio J, Chakraborty S, et al. Deep hashing network for unsupervised domain adaptation[C]. CVPR 2017.
 
 [21] H. Lu, L. Zhang, et al. When Unsupervised Domain Adaptation Meets Tensor Representations. ICCV 2017.
+
+[22] J. Wang, Y. Chen, L. Hu, X. Peng, and P. Yu. Stratified Transfer Learning for Cross-domain Activity Recognition. 2018 IEEE International Conference on Pervasive Computing and Communications (PerCom).
+
+[23] Motiian S, Piccirilli M, Adjeroh D A, et al. Unified deep supervised domain adaptation and generalization[C]//The IEEE International Conference on Computer Vision (ICCV). 2017, 2.
+
+[24] Long M, Cao Z, Wang J, et al. Learning Multiple Tasks with Multilinear Relationship Networks[C]//Advances in Neural Information Processing Systems. 2017: 1593-1602.
+
+[25] Maria Carlucci F, Porzi L, Caputo B, et al. AutoDIAL: Automatic DomaIn Alignment Layers[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017: 5067-5075.
+
+[26] Bousmalis K, Trigeorgis G, Silberman N, et al. Domain separation networks[C]//Advances in Neural Information Processing Systems. 2016: 343-351.
+
+[27] M. Ghifary, W. B. Kleijn, M. Zhang, D. Balduzzi, and W. Li. "Deep Reconstruction-Classification Networks for Unsupervised Domain Adaptation (DRCN)", European Conference on Computer Vision (ECCV), 2016
+
+[28] M. Ghifary, W. B. Kleijn, M. Zhang, D. Balduzzi.
+Domain Generalization for Object Recognition with Multi-task Autoencoders,
+accepted in International Conference on Computer Vision (ICCV 2015), Santiago, Chile.
+
+[29] Aljundi R, Emonet R, Muselet D, et al. Landmarks-based kernelized subspace alignment for unsupervised domain adaptation[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015: 56-63.
+
+[30] Rannen A, Aljundi R, Blaschko M B, et al. Encoder based lifelong learning[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017: 1320-1328.
+
+[31] Peilin Zhao and Steven C.H. Hoi. OTL: A Framework of Online Transfer Learning. ICML 2010.
+
+[32] Pietro Morerio, Jacopo Cavazza, Vittorio Murino. Minimal-Entropy Correlation Alignment for Unsupervised Deep Domain Adaptation. ICLR 2018.
+
+[33] Sun B, Saenko K. Deep coral: Correlation alignment for deep domain adaptation[C]//European Conference on Computer Vision. Springer, Cham, 2016: 443-450.
+
+[34] Tolstikhin I, Bousquet O, Gelly S, et al. Wasserstein Auto-Encoders[J]. arXiv preprint arXiv:1711.01558, 2017.
+
+[35] Saito K, Ushiku Y, Harada T. Asymmetric tri-training for unsupervised domain adaptation[J]. arXiv preprint arXiv:1702.08400, 2017.
+
+[36] Bousmalis K, Silberman N, Dohan D, et al. Unsupervised pixel-level domain adaptation with generative adversarial networks[C]//The IEEE Conference on Computer Vision and Pattern Recognition (CVPR). 2017, 1(2): 7.
+
+[37] Shen J, Qu Y, Zhang W, et al. Adversarial representation learning for domain adaptation[J]. arXiv preprint arXiv:1707.01217, 2017.
+
+[38] Kim T, Cha M, Kim H, et al. Learning to discover cross-domain relations with generative adversarial networks[J]. arXiv preprint arXiv:1703.05192, 2017.
